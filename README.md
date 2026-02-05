@@ -15,7 +15,7 @@ This portfolio showcases my skills, projects, technical journey, and experience 
 - 🚀 Aspiring Software Development Engineer
 - 🧠 Learning DSA, System Design & Cloud (Microsoft Azure)
 - 🤝 Strong interest in real-world project development
-- 🎨 Artist & National-Level Achievement Holder
+
 
 ---
 
@@ -73,3 +73,10 @@ This portfolio showcases my skills, projects, technical journey, and experience 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
 cd YOUR_REPO_NAME
+
+
+Install Dependencies
+npm install
+
+Run Development Server
+npm start
