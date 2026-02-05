@@ -433,8 +433,8 @@ const About = () => {
   });
 
   const stats = [
-    { label: "Years Experience", value: "2+", icon: Zap },
-    { label: "Projects Completed", value: "10+", icon: Award },
+    { label: "SDE", value: "Role", icon: Zap },
+    { label: "System Design", value: "Beginner", icon: Award },
   ];
 
   const features = [
