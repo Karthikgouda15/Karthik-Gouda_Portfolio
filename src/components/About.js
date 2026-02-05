@@ -489,12 +489,21 @@ const About = () => {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
           >
-            <p className="leading-relaxed">
-              I am a <span className="text-white font-medium">BCA Graduate</span> and MERN Stack specialist who views code as a tool for storytelling. Beyond just writing syntax, I focus on the <span className="text-white">User Experience (UX)</span>—ensuring every interaction is intuitive and every deployment is seamless.
-            </p>
-            <p>
-              My workflow is powered by modern tools like <span className="text-primary italic">Cursor</span> and <span className="text-primary italic">Vercel</span>, allowing me to focus on high-level architecture while maintaining a rapid development pace.
-            </p>
+            <p className="leading-relaxed mb-4">
+  I am a <span className="text-white font-medium">Computer Science Engineering</span> student and MERN Stack developer who views code as a tool for building meaningful digital experiences. Beyond writing syntax, I focus strongly on <span className="text-white">User Experience (UX)</span>, ensuring every interaction feels intuitive and every deployment is smooth and scalable.
+</p>
+
+<p className="leading-relaxed mb-4">
+  Alongside full-stack development, I am preparing for Software Development Engineer (SDE) roles by strengthening my skills in Data Structures & Algorithms, System Design, core Computer Science fundamentals, Cloud computing, and Microsoft Azure. I have hands-on experience with Docker, Kubernetes, SDLC, and Agile practices while continuously building scalable real-world applications.
+</p>
+
+<p className="leading-relaxed mb-4">
+  I am also building a strong foundation in Generative AI, working with Large Language Models (LLMs), AI assistants, chatbots, AI agents, vector embeddings, vector databases, and Retrieval-Augmented Generation (RAG) using LangChain. I actively contribute to open-source projects, participate in hackathons, and focus on improving my technical depth and problem-solving skills.
+</p>
+
+<p className="leading-relaxed">
+  My workflow is powered by modern tools like <span className="text-primary italic">Google Gemini</span> and <span className="text-primary italic">Vercel</span>, enabling faster development while maintaining clean architecture and high-quality engineering practices.
+</p>
 
             {/* Stats Bento Style */}
             <div className="grid grid-cols-2 gap-4 pt-8">
