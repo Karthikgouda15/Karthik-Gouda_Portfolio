@@ -5,7 +5,9 @@ import {
   Brain,
   Layout,
   Database,
-  Lock
+  Lock,
+  Server,
+  Cloud // Added for Azure/Cloud icon
 } from 'lucide-react';
 
 const Skills = () => {
@@ -27,6 +29,17 @@ const Skills = () => {
       ]
     },
     {
+      title: "System Design",
+      icon: Server,
+      skills: [
+        { name: "Scalability", level: 85 },
+        { name: "Microservices", level: 80 },
+        { name: "Load Balancing", level: 75 },
+        { name: "Caching/Redis", level: 80 },
+        { name: "Database Design", level: 85 }
+      ]
+    },
+    {
       title: "API & Security",
       icon: Lock,
       skills: [
@@ -37,9 +50,10 @@ const Skills = () => {
       ]
     },
     {
-      title: "Gen AI & Engineering",
+      title: "Gen AI & Cloud", // Updated title to reflect Azure addition
       icon: Brain,
       skills: [
+        { name: "Azure AZ-900", level: 95 }, // Added Microsoft Azure AZ-900
         { name: "Prompt Engineering", level: 90 },
         { name: "AI Integration", level: 85 },
         { name: "ChatGPT/LLMs", level: 95 },
@@ -78,7 +92,7 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -147,4 +161,4 @@ const Skills = () => {
   );
 };
 
-export default Skills; 
+export default Skills;

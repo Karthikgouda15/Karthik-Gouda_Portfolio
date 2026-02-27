@@ -14,37 +14,37 @@ const Projects = () => {
   const projects = [
     {
       id: 100,
-      title: "WalletIQ – AI Expense Manager",
+      title: "Emotify – AI-powered Emotion Based Music Recommendation System ",
       description:
-        "A smart financial ecosystem that leverages AI to categorize expenses, forecast budget trends, and provide authorized financial insights.",
+        "A smart AI-powered music ecosystem that analyzes facial emotions to deliver personalized song recommendations, integrates voice-assisted controls for seamless interaction, and enhances user experience through real-time mood detection and intelligent playlist management.",
       image:
-        "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&q=80",
-      technologies: ["React", "Redux", "Node.js", "AI Integration", "MongoDB"],
+        "https://images.unsplash.com/photo-1708164333066-dabc2dac17d2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["React", "Node.js", "AI Integration", "MongoDB", "Tailwind CSS","Spotify API", "Context API", "Face-api"],
       category: "featured",
-      github: "https://github.com/KarthikGouda/ExpenseTracker",
-      live: "https://expense-tracker-7o1q.vercel.app/",
+      github: "https://github.com/Karthikgouda15/Emotify",
+      live: "https://emootify.netlify.app",
       features: [
-        "🤖 AI-driven expense categorization & analysis",
-        "📊 Dynamic charts & financial forecasting",
-        "🔐 Secure JWT Auth integration",
-        "📱 Fully responsive dashboard",
+        "🤖 AI Face Scanning: Real-time emotion detection using face-api.js models.",
+        "🎧 Seamless integration with Spotify API + Local MP3 fallback.",
+        "🎙️ Voice Assistant: Hands-free control to navigate the app.",
+        "🔐 Secure Auth: Full user registration/login system with OTP verification.",
       ],
     },
     {
       id: 101,
-      title: "BlogSphere – Modern Publishing",
+      title: "AirBnb – Travel Diaries & Rental Management Platform",
       description:
-        "A robust content management platform featuring rich text editing, user profiles, and seamless content delivery.",
+        "A full-stack Airbnb-style accommodation platform for discovering, listing, and managing rental properties with secure authentication and a responsive user experience.",
       image:
-        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=800&q=80",
-      technologies: ["MERN Stack", "RESTful API", "Tailwind CSS"],
+        "https://plus.unsplash.com/premium_photo-1684508638760-72ad80c0055f?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["MongoDB", "Express.js", "Node.js", "RESTful API", "Tailwind CSS","MVC Architecture",  "Cloudinary"],
       category: "featured",
-      github: "https://github.com/KarthikGouda/blogify",
+      github: "https://github.com/Karthikgouda15/AirBnb",
       live: "#",
       features: [
-        "📝 Rich text editor integration",
-        "👤 User profiles & role management",
-        "🚀 Optimized performance scoring",
+        "Advanced Property Search & Filters – Search by location, price range, amenities, ratings, and availability with real-time filtering.",
+        "Booking & Availability Management – Interactive for date selection, instant booking, reservation tracking, and booking history.",
+        "User Profiles & Reviews System – Host and guest profiles with ratings, reviews, wishlist (favorites), and secure authentication.",
       ],
     },
     {

@@ -23,10 +23,10 @@ const App = () => {
             <About />
             <Skills />
             <Projects />
-            <AIIntegration />
+            {/* <AIIntegration /> */}
             <Contact />
           </main>
-          <Footer />
+          {/* <Footer /> */}
         </>
       ) : (
         <>

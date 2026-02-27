@@ -3,11 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu,
   X,
-  Cpu,
-  Layers,
   UserCircle,
   Send,
   TerminalSquare,
+  Layers,
   FileText,
   Home
 } from 'lucide-react';
@@ -19,13 +18,9 @@ const Header = ({ setView }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // 1. Handle Background styling
       setIsScrolled(window.scrollY > 20);
       
-      // 2. Handle Active State (Scroll Spy)
       const sections = ['about', 'skills', 'projects', 'contact'];
-      
-      // If user is at the top of the page, set active to home
       if (window.scrollY < 300) {
         setActiveSection('home');
         return;
@@ -35,7 +30,6 @@ const Header = ({ setView }) => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // If section is in view
           if (rect.top <= 150 && rect.bottom >= 150) {
             setActiveSection(section);
           }
@@ -57,7 +51,6 @@ const Header = ({ setView }) => {
 
   const handleNavClick = (id) => {
     if (id === 'home') {
-      // SCROLL TO TOP OF PAGE
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('home');
     } else {
@@ -73,49 +66,49 @@ const Header = ({ setView }) => {
     <div className="fixed top-0 left-0 right-0 z-[100] flex justify-center p-4 md:p-6 pointer-events-none">
       <motion.header
         className={`
-          pointer-events-auto flex items-center justify-between px-6 py-3 rounded-2xl
+          pointer-events-auto flex items-center justify-between px-4 md:px-6 py-3 rounded-2xl
           transition-all duration-500 border
           ${isScrolled 
-            ? 'w-full max-w-5xl bg-black/70 backdrop-blur-xl border-white/10 shadow-2xl' 
+            ? 'w-full max-w-5xl bg-black/80 backdrop-blur-xl border-white/10 shadow-2xl' 
             : 'w-full max-w-7xl bg-transparent border-transparent'
           }
         `}
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        {/* Logo */}
+        {/* Logo Section - Visible on All Screens */}
         <motion.div
-          className="flex items-center gap-3 cursor-pointer group"
+          className="flex items-center gap-3 cursor-pointer group shrink-0"
           onClick={() => handleNavClick('home')}
           whileHover={{ scale: 1.02 }}
         >
-          {/* .....................................Small Logo........................................ */}
-<div className="relative group">
-  {/* Ambient background glow on hover */}
-  <div className="absolute inset-0 bg-primary/25 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
-  
-  {/* The Circle Container */}
-  <div className="relative w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-white/20 to-transparent border border-white/10 shadow-2xl overflow-visible group-hover:border-primary/50 transition-all duration-500">
-    
-    {/* The Photo - Clipped to a perfect circle */}
-    <div className="w-full h-full rounded-full overflow-hidden border border-black">
-      <img 
-        src="/images/KarthikGouda.jpeg" // Replace with your image path
-        alt="Karthik Gouda"
-        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
-      />
-    </div>
+          <div className="relative">
+            <div className="absolute inset-0 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700" />
+            
+            {/* Profile Photo Container */}
+            <div className="relative w-10 h-10 md:w-11 md:h-11 shrink-0 rounded-full p-[1.5px] bg-gradient-to-tr from-white/20 to-transparent border border-white/10 shadow-2xl overflow-visible group-hover:border-blue-500/50 transition-all duration-500">
+              <div className="w-full h-full rounded-full overflow-hidden border border-black bg-[#111]">
+                <img 
+                  src="/images/KarthikGouda.jpeg" 
+                  alt="Karthik Gouda"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                />
+              </div>
 
-    {/* Elegant Professional Status Indicator - Positioned for a circle */}
-    <div className="absolute bottom-[2px] right-[2px] flex h-2.5 w-2.5">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 border border-black"></span>
-    </div>
-  </div>
-</div>
-          <div className="hidden sm:flex flex-col leading-tight">
-            <span className="text-sm font-bold text-white tracking-tight">Karthik Gouda</span>
-            <span className="text-[10px] text-blue-400 font-mono uppercase tracking-widest font-bold">Software Developer</span>
+              {/* Status Indicator */}
+              <div className="absolute bottom-0 right-0 flex h-2.5 w-2.5">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 border border-black"></span>
+              </div>
+            </div>
+          </div>
+
+          {/* Name and Title - Adjusted for Mobile Visibility */}
+          <div className="flex flex-col leading-tight">
+            <span className="text-sm md:text-base font-bold text-white tracking-tight">Karthik Gouda</span>
+            <span className="text-[8px] md:text-[10px] text-blue-400 font-mono uppercase tracking-widest font-bold">
+              Software Developer
+            </span>
           </div>
         </motion.div>
 
@@ -147,19 +140,19 @@ const Header = ({ setView }) => {
           </ul>
         </nav>
 
-        {/* Action buttons */}
-        <div className="flex items-center gap-3">
+        {/* Action Buttons */}
+        <div className="flex items-center gap-2 md:gap-3">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="hidden md:flex items-center gap-2 px-5 py-2 bg-white text-black text-sm font-bold rounded-xl hover:bg-blue-500 hover:text-white transition-all shadow-xl"
+            className="hidden md:flex items-center gap-2 px-5 py-2 bg-white text-black text-sm font-bold rounded-xl hover:bg-blue-600 hover:text-white transition-all shadow-xl"
             onClick={() => setView('resume')}
           >
             <FileText size={16} />
             Resume
           </motion.button>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Toggle */}
           <button
             className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -168,7 +161,7 @@ const Header = ({ setView }) => {
           </button>
         </div>
 
-        {/* Mobile Menu Dropdown */}
+        {/* Mobile Navigation Dropdown */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -195,7 +188,7 @@ const Header = ({ setView }) => {
                 <div className="h-px bg-white/5 my-2 mx-4" />
                 <button
                   onClick={() => setView('resume')}
-                  className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-white text-black font-bold hover:bg-blue-500 hover:text-white transition-all"
+                  className="flex items-center justify-center gap-3 p-4 rounded-2xl bg-white text-black font-bold hover:bg-blue-600 transition-all"
                 >
                   <FileText size={20} />
                   View Resume
