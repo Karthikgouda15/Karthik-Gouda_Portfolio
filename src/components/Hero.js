@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { Github, ArrowDown, ChevronRight } from 'lucide-react';
+import { Github, ArrowDown, ChevronRight, Calendar } from 'lucide-react'; // Added Calendar
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -65,10 +65,14 @@ const Hero = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-wrap gap-8 items-center justify-center lg:justify-start"
             >
+              {/* UPDATED: Topmate Connection Button */}
               <a 
-                href="#contact" 
+                href="https://topmate.io/karthik154" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="group flex items-center gap-3 px-10 py-5 bg-white text-black font-black rounded-2xl hover:bg-blue-600 hover:text-white transition-all duration-500 shadow-[0_20px_50px_rgba(255,255,255,0.05)] hover:shadow-blue-600/20 hover:-translate-y-1"
               >
+                <Calendar size={18} className="group-hover:rotate-12 transition-transform" />
                 Let's connect
                 <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </a>
@@ -95,10 +99,7 @@ const Hero = () => {
             className="flex-1 order-1 lg:order-2 flex justify-center"
           >
             <div className="relative group">
-              {/* Electric Aura */}
               <div className="absolute -inset-4 bg-blue-500/20 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              
-              {/* Large Image Frame */}
               <div className="relative w-72 h-72 md:w-[475px] md:h-[475px] rounded-full p-2 bg-gradient-to-tr from-blue-500/40 via-white/10 to-purple-500/40 shadow-2xl">
                 <div className="w-full h-full rounded-full overflow-hidden bg-[#0a0a0a] border-[8px] border-[#0a0a0a]">
                   <img 
@@ -109,7 +110,6 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating Tech Badge */}
               <motion.div 
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
