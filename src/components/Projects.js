@@ -47,30 +47,30 @@ const Projects = () => {
         "User Profiles & Reviews System – Host and guest profiles with ratings, reviews, wishlist (favorites), and secure authentication.",
       ],
     },
-    {
-      id: 6,
-      title: "QuickNotes",
-      description:
-        "A lightning-fast note-taking application designed for efficiency and ease of use.",
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-      technologies: ["React", "Local Storage", "Search Algorithms"],
-      category: "mini",
-      github: "https://github.com/KarthikGouda/Notes-saver",
-      live: "https://project-2-five-neon.vercel.app/",
-      features: ["Search & Filter", "Update Pastes", "Copy Pastes"],
-    },
+    // {
+    //   id: 6,
+    //   title: "QuickNotes",
+    //   description:
+    //     "A lightning-fast note-taking application designed for efficiency and ease of use.",
+    //   image:
+    //     "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
+    //   technologies: ["React", "Local Storage", "Search Algorithms"],
+    //   category: "mini",
+    //   github: "https://github.com/KarthikGouda/Notes-saver",
+    //   live: "https://project-2-five-neon.vercel.app/",
+    //   features: ["Search & Filter", "Update Pastes", "Copy Pastes"],
+    // },
     {
       id: 1,
-      title: "Amazon Clone",
+      title: "Zerodha Clone",
       description:
-        "A full-featured e-commerce platform with shopping cart, order tracking.",
+        "Online Stock Trading Platform Development.",
       image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+        "https://assets.thehansindia.com/h-upload/2025/12/06/1607079-zerodha.webp",
       technologies: ["JavaScript", "CSS", "LocalStorage"],
       category: "mini",
-      github: "https://github.com/KarthikGouda/Amazon-Clone",
-      live: "https://projectama.netlify.app/",
+      github: "https://github.com/Karthikgouda15/Zerodha-.",
+      live: "https://zerodha-frontend01.netlify.app/",
       features: ["Cart logic", "Order history", "Search & filter"],
     },
   ];

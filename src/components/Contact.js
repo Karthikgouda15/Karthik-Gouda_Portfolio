@@ -55,7 +55,15 @@ const Contact = () => {
               {[
                 { icon: <Github size={20} />, href: "https://github.com/karthikgouda15" },
                 { icon: <Linkedin size={20} />, href: "https://www.linkedin.com/in/karthikgouda15/" },
-                { icon: <Code2 size={20} />, href: "#" },
+                // { icon: <Code2 size={20} />, href: "#" },
+                { 
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+      </svg>
+    ), 
+    href: "https://x.com/Karthik06360434" // Replace with your handle
+  },
                 { icon: <Globe size={20} />, href: "#" },
               ].map((social, idx) => (
                 <motion.a
@@ -149,11 +157,31 @@ const Contact = () => {
         </div>
       </div>
       
-      {/* Bottom bar */}
-      <div className="max-w-7xl mx-auto mt-10 flex flex-col md:flex-row justify-between items-center px-4 text-[10px] font-mono tracking-[0.3em] text-gray-600 uppercase">
-        <p>© 2026. KARTHIK GOUDA.</p>
-        <p className="mt-2 md:mt-0">Would love to connect with you!</p>
-      </div>
+      {/* Minimalist Artist Footer */}
+<div className="max-w-7xl mx-auto mt-20 border-t border-white/5 py-12">
+  <div className="flex flex-col items-center justify-center space-y-4">
+    
+    {/* Animated Decorative Line */}
+    <motion.div 
+      initial={{ width: 0 }}
+      whileInView={{ width: "40px" }}
+      className="h-[1px] bg-blue-600"
+    />
+
+    <div className="flex flex-col items-center text-center">
+      <p className="text-[10px] md:text-xs font-black uppercase tracking-[0.6em] text-white/90">
+        Karthik Gouda
+      </p>
+      <p className="text-[9px] font-mono tracking-[0.3em] text-gray-600 uppercase mt-2">
+        © 2026 All Rights Reserved
+      </p>
+    </div>
+
+    {/* Subtle Glow Point */}
+    <div className="w-1 h-1 bg-blue-600 rounded-full shadow-[0_0_10px_#2563eb] opacity-50" />
+    
+  </div>
+</div>
     </section>
   );
 };
